@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodpanda Menu Capture</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        .btn-success {
+            margin-bottom: 10px;
+        }
+
+        .demo img {
+            position: relative;
+            left: 40px;
+            border: 2px green dashed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn">
+        <a class="btn btn-success"
+            href="javascript:var products = document.getElementsByClassName(&quot;dish-name fn p-name&quot;);	var prices = document.getElementsByClassName(&quot;price-tags-container&quot;);		var menu = &quot;&quot;;	var i = 0;	for (i=0; i< products.length; i++) {		var price = prices[i].innerText.replace(&quot;NT$&quot;,&quot;&quot;);		var product = products[i].innerText;		menu += product +&quot;,&quot;+ price + &quot;\r\n&quot;;	};	document.body.innerHTML = '<div class=&quot;collected&quot; style=&quot;background:#000;color:#00c400&quot;></div>';	document.getElementsByClassName(&quot;collected&quot;)[0].innerText = menu;	var range = document.createRange();    range.selectNode(document.getElementsByClassName(&quot;collected&quot;)[0]);    window.getSelection().addRange(range);    document.execCommand(&quot;copy&quot;);	alert(&quot;menu has been copied to clipboard&quot;);">Foodpanda
+            Menu Capture</a>
+    </div>
+    <div class="demo">
+        <h3>使用說明</h3>
+        <div>
+            <p>1.拖曳上列按鈕放至書籤列</p>
+            <img src="https://i.imgur.com/VhslTTx.gif" alt="bookmark">
+        </div>
+        <div>
+            <p>2.瀏覽任意熊貓店家</p>
+            <p>3.點選書籤列按鈕 (即得menu清單)</p>
+            <img src="https://i.imgur.com/JQ96MrD.gif" alt="foodpanda">
+        </div>
+    </div>
+
+</body>
+
+</html>
